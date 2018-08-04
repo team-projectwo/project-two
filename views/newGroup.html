@@ -1,14 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-    <title>Go or Owe</title>
-    <meta charset="utf-8">
+   <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Create a Group</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="../public/styles/styles.css" /> -->
+  
     <style>
         .jumbotron {
             background-color: #000000;
@@ -23,9 +29,43 @@
         .container-fluid {
             padding: 60px 50px;
         }
+      
+        #navbar {
+            font-size: 18px;
+        }
     </style>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   
+        <!-- Just an image -->
+        <a class="navbar-brand" href="#">
+            <img src="/GoOrOwe/public/images/gym-equipment.png" width="30" height="30" alt="">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" id="navbar" href="/GoOrOwe/views/home.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item" id="navbar">
+                    <a class="nav-link"  id="navbar" href="/GoOrOwe/views/group.html">Groups</a>
+                </li>
+                <li class="nav-item" id="navbar">
+                    <a class="nav-link" id="navbar" href="/GoOrOwe/views/addUsers.html">Send Invitation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="navbar" href="../views/settings">Account</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <form class="container-fluid">
+  </head>
+  
+  <body>
+  
+   <form class="container-fluid">
 
         <div class="form-group row">
             <label for="inputGroupName" class="col-sm-1 col-form-label">Group Name</label>
@@ -47,3 +87,11 @@
 
 
     </form>
+
+
+</body>
+  
+<script src="server.js"></script>
+
+</html>
+
