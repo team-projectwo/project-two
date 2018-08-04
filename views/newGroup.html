@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+
+   <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Create a Group</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,13 +14,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="../public/styles/styles.css" /> -->
-</head>
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  
     <style>
+        .jumbotron {
+            background-color: #000000;
+            color: #fff;
+            padding: 100px 25px;
+        }
+
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+
+        .container-fluid {
+            padding: 60px 50px;
+        }
+      
         #navbar {
             font-size: 18px;
-        }</style>
+        }
+    </style>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+   
         <!-- Just an image -->
         <a class="navbar-brand" href="#">
             <img src="/GoOrOwe/public/images/gym-equipment.png" width="30" height="30" alt="">
@@ -42,10 +60,38 @@
             </ul>
         </div>
     </nav>
-<body>
+
+  </head>
+  
+  <body>
+  
+   <form class="container-fluid">
+
+        <div class="form-group row">
+            <label for="inputGroupName" class="col-sm-1 col-form-label">Group Name</label>
+            <div class="col-sm-2">
+                <input type="password" class="form-control" id="inputGroupName" placeholder="Swollmates">
+            </div>
+        </div>
+
+
+        <div>
+            <!-- This will hold the paypal money pot information -->
+        </div>
+
+        <div>
+            <!-- This will hold the paypal amount and frequency for the group membmers -->
+            <!-- Frequency = daily / Amount = $1-->
+        </div>
+
+
+
+    </form>
 
 
 </body>
+  
 <script src="server.js"></script>
 
 </html>
+
