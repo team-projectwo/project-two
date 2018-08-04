@@ -1,3 +1,14 @@
-.list-group-item {
-  line-height: 2.5;
+.jumbotron  {
+  background-color: black;
+  color: white;
+  padding: 100px 25px;
+}
+
+.container-fluid {
+  padding: 60px 50px;
+}
+
+.input-group {
+  margin:auto;
+
 }
