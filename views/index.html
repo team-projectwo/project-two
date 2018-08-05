@@ -10,6 +10,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="google-signin-client_id" content="61572641211-k2a0hftc6ecou7nc1cqtm6nfcqfh9f00.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../public/js/index.js"></script>
+
   <style>
   .jumbotron {
       background-color: #000000;
@@ -34,7 +39,7 @@
   <form class="form-inline">
     <div class="input-group">
 
-    <button type="button" class="btn btn-danger">Log In</button>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>   
 
       </div>
     </div>
