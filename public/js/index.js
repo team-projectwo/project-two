@@ -97,3 +97,8 @@ var handleDeleteBtnClick = function() {
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+
+gapi.load("auth2", function() {
+  gapi.auth2.init();
+});
