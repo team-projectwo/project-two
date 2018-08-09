@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
 
   <title>Go or Owe</title>
@@ -15,8 +16,11 @@
   <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="../public/js/index.js"></script>
+
 </head>
+
 <body>
+
   <div class="jumbotron text-center">
   <h1>Go or Owe</h1> 
   <p>Go to the Gym, or Pay Up!</p> 
@@ -57,57 +61,106 @@
    }
  </script>
 
-    
+
+  <div class="jumbotron text-center">
+    <h1>Go or Owe</h1>
+    <p>Go to the Gym, or Pay Up!</p>
+    <form class="form-inline">
+      <div class="input-group">
+        <script>
+          function Redirect() {
+            window.location = "http://localhost:3000/home"
+          }
+        </script>
+
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        <script>
+          function onSignIn(googleUser) {
+            // Useful data for your client-side scripts:
+            var profile = googleUser.getBasicProfile();
+            // console.log('giving up ')
+            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+            console.log('Full Name: ' + profile.getName());
+            console.log('Given Name: ' + profile.getGivenName());
+            console.log('Family Name: ' + profile.getFamilyName());
+            console.log("Image URL: " + profile.getImageUrl());
+            console.log("Email: " + profile.getEmail());
+
+            // The ID token you need to pass to your backend:
+            var id_token = googleUser.getAuthResponse().id_token;
+            // console.log("ID Token: " + id_token);
+          };
+        </script>
+        <a href="#" onclick="signOut();">Sign out</a>
+        <script>
+          function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+              console.log('User signed out.');
+            });
+          }
+        </script>
+
 
       </div>
-    </div>
+  </div>
   </form>
-</div>
+  </div>
 
-<div class="container-fluid">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-sm-8">
         <h2>How It Works</h2>
         <h4>Keep Yourself and your Friends accountable.</h4>
-        <p>This is a fun App to help build some comradery amongst your Friends. Create a Group, Set a Goal, and throw in some $$.</p> 
+        <p>This is a fun App to help build some comradery amongst your Friends. Create a Group, Set a Goal, and throw in some
+          $$.</p>
 
-      
+
       </div>
       <div class="col-sm-4">
         <span class="glyphicon glyphicon-signal logo"></span>
       </div>
     </div>
   </div>
-  
-  
-      
+
+
+
   <div class="container-fluid text-center bg-grey">
-      
 
 
-    
+
+
     <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-        <h2>What our customers say</h2>
+      <h2>What our customers say</h2>
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
       </ol>
-    
+
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-        <h4>"This App is awesome!"<br><span style="font-style:normal;">Lebron James, Professional NBA Athlete</span></h4>
+          <h4>"This App is awesome!"
+            <br>
+            <span style="font-style:normal;">Lebron James, Professional NBA Athlete</span>
+          </h4>
         </div>
         <div class="item">
-          <h4>"One word... AMAZE-BALLS!!"<br><span style="font-style:normal;">Jan Levinson, VP of Sales, Dunder Mifflin</span></h4>
+          <h4>"One word... AMAZE-BALLS!!"
+            <br>
+            <span style="font-style:normal;">Jan Levinson, VP of Sales, Dunder Mifflin</span>
+          </h4>
         </div>
         <div class="item">
-          <h4>"Could I... BE any more happy with this app?"<br><span style="font-style:normal;">Butterbean, Boxer </span></h4>
+          <h4>"Could I... BE any more happy with this app?"
+            <br>
+            <span style="font-style:normal;">Butterbean, Boxer </span>
+          </h4>
         </div>
       </div>
-    
+
       <!-- Left and right controls -->
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -118,7 +171,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-  
+
 
 </body>
 
