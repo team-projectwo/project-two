@@ -22,47 +22,6 @@
 <body>
 
   <div class="jumbotron text-center">
-  <h1>Go or Owe</h1> 
-  <p>Go to the Gym, or Pay Up!</p> 
-  <form class="form-inline">
-    <div class="input-group">
-<script>
-  function Redirect(){
-    window.location="http://localhost:3000/home"
-  }
-</script>
-
-<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" onclick="Redirect()"></div>
-<script>
-  function onSignIn(googleUser) {
-    // Useful data for your client-side scripts:
-    var profile = googleUser.getBasicProfile();
-    // console.log('giving up ')
-    console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-    console.log('Full Name: ' + profile.getName());
-    console.log('Given Name: ' + profile.getGivenName());
-    console.log('Family Name: ' + profile.getFamilyName());
-    console.log("Image URL: " + profile.getImageUrl());
-    console.log("Email: " + profile.getEmail());
-
-    // The ID token you need to pass to your backend:
-    var id_token = googleUser.getAuthResponse().id_token;
-    // console.log("ID Token: " + id_token);
-  };
-  onSignIn();  
-</script>
- <a href="#" onclick="signOut();">Sign out</a>
- <script>
-   function signOut() {
-     var auth2 = gapi.auth2.getAuthInstance();
-     auth2.signOut().then(function () {
-       console.log('User signed out.');
-     });
-   }
- </script>
-
-
-  <div class="jumbotron text-center">
     <h1>Go or Owe</h1>
     <p>Go to the Gym, or Pay Up!</p>
     <form class="form-inline">
@@ -73,7 +32,7 @@
           }
         </script>
 
-        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" onclick="Redirect()"></div>
         <script>
           function onSignIn(googleUser) {
             // Useful data for your client-side scripts:
@@ -90,6 +49,7 @@
             var id_token = googleUser.getAuthResponse().id_token;
             // console.log("ID Token: " + id_token);
           };
+          onSignIn();
         </script>
         <a href="#" onclick="signOut();">Sign out</a>
         <script>
@@ -100,6 +60,8 @@
             });
           }
         </script>
+
+
 
 
       </div>
@@ -113,7 +75,8 @@
         <h2>How It Works</h2>
         <h4>Keep Yourself and your Friends accountable.</h4>
         <p>This is a fun App to help build some comradery amongst your Friends. Create a Group, Set a Goal, and throw in some
-          $$.</p>
+          $$.
+        </p>
 
 
       </div>
