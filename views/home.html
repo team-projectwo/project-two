@@ -102,9 +102,29 @@
             $('.sidenav').sidenav();
         });
 
-        // Onclick button
-
+        // Checkin button
         $("#check-in-click").click(function () {
+
+            var geoLocater = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBpN9uvSZcmOLHtbehWtVy3ISrbBOa84Y0",
+                "method": "POST",
+                "headers": {
+                    "Cache-Control": "no-cache",
+                    "Postman-Token": "18e29c80-3d11-4662-b3bd-8014cad3785b"
+                }
+            }
+
+            $.ajax(geoLocater).done(function (response) {
+
+                var userLatitude = response.location.lat;
+                var userLongitude = response.location.lng;
+
+                console.log(userLatitude);
+                console.log(userLongitude);
+            });
+
             console.log("hello there");
         });
         // Reward button 
