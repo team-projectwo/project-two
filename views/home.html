@@ -7,70 +7,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Go or Owe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        </div>
-        <!-- Just an image -->
-        <a class="navbar-brand" href="#">
-            <img src="/GoOrOwe/public/images/gym-equipment.png" width="30" height="30" alt="">
-        </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" id="navbar" href="/home">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
+    <!-- Materialzie -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+
+
+    <!-- <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Logo</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="sass.html">Sass</a>
                 </li>
-                <li class="nav-item" id="navbar">
-                    <a class="nav-link" id="navbar" href="/group">Groups</a>
+                <li>
+                    <a href="badges.html">Components</a>
                 </li>
-                <li class="nav-item" id="navbar">
-                    <a class="nav-link" id="navbar" href="/addUsers">Send Invitation</a>
+                <li>
+                    <a href="collapsible.html">Javascript</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="navbar" href="/newGroup">not sure </a>
+                <li>
+                    <a href="mobile.html">Mobile</a>
                 </li>
             </ul>
         </div>
     </nav>
-</head>
 
-<html>
+    <ul class="sidenav" id="mobile-demo">
+        <li>
+            <a href="sass.html">Sass</a>
+        </li>
+        <li>
+            <a href="badges.html">Components</a>
+        </li>
+        <li>
+            <a href="collapsible.html">Javascript</a>
+        </li>
+        <li>
+            <a href="mobile.html">Mobile</a>
+        </li>
+    </ul>
 
-<div class="row">
-
-
-
-    <button type="button" class="btn btn-outline-danger">Danger</button>
-</div>
+    <body>
 
 
 
 
-<body>
+    </body>
+    <script src="server.js"></script>
+    <script>
 
-    <!-- Container (How it Works) -->
-    <div class="container-fluid">
-        <h2>My Groups</h2>
-        <div>
-            <!-- This will dynamically display the groups a person is listed in -->
-        </div>
-    </div>
 
-    <div class="container-fluid">
-        <h2>Gym Calendar</h2>
-        <div>
-            <!-- This will hold the calendar for all the workouts that are scheduled in all groups -->
-        </div>
-    </div>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
 
-</body>
-<script src="server.js"></script>
+    </script>
 
 </html>
