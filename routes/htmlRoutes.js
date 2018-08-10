@@ -11,20 +11,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../views/home.html"));
   });
 
-  app.get("/addUsers", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/addUsers.html"));
-  });
-
-  app.get("/group", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/group.html"));
-  });
-
-  app.get("/newGroup", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/newGroup.html"));
-  });
-
-  app.get("/settings", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/settings.html"));
+  app.get("/shop", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/shop.html"));
   });
 
   // Load example page and pass in an example by id
