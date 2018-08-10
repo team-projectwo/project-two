@@ -7,56 +7,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Go or Owe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Materialzie -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-
-
-
     <!-- <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <nav>
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo">Logo</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul class="right hide-on-med-and-down">
-                <li>
-                    <a href="sass.html">Sass</a>
-                </li>
-                <li>
-                    <a href="badges.html">Components</a>
-                </li>
-                <li>
-                    <a href="collapsible.html">Javascript</a>
-                </li>
-                <li>
-                    <a href="mobile.html">Mobile</a>
-                </li>
-            </ul>
+        <div class="row">
+            <div class="nav-wrapper col s10">
+                <a href="#!" class="brand-logo">Gym Go</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="/">Sign in / Sign out</a>
+                    </li>
+                    <li>
+                        <a href="/home">Home</a>
+                    </li>
+                    <li>
+                        <a href="/shop">Shop</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="col s2">
+                <p>Google</p>
+            </div>
+
         </div>
+
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
         <li>
-            <a href="sass.html">Sass</a>
+            <a href="/">Sign in / Sign out</a>
         </li>
         <li>
-            <a href="badges.html">Components</a>
+            <a href="/home">Home</a>
         </li>
         <li>
-            <a href="collapsible.html">Javascript</a>
-        </li>
-        <li>
-            <a href="mobile.html">Mobile</a>
+            <a href="/shop">Shop</a>
         </li>
     </ul>
-
+</head>
     <body>
-
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
         <div class="container valign-wrapper">
 
 
@@ -67,14 +70,26 @@
 
 
                     <a class="waves-effect waves-light btn">
-                        <i id="check-in-click" class="material-icons">Check In</i>
+                        <i id="check-in-click">Check In</i>
                     </a>
 
 
                 </div>
 
             </div>
-
+        </div>
+        <div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+<div class="row"></div>
+        <div class="container valign-wrapper">
+        <div class="row">
+                <a class="waves-effect waves-light btn">
+                        <i id="rewardsBtn">Rewards</i>
+                    </a>
+        </div>
         </div>
 
 
@@ -82,7 +97,6 @@
     </body>
     <script src="server.js"></script>
     <script>
-
         // materialize initiation
         $(document).ready(function () {
             $('.sidenav').sidenav();
@@ -93,8 +107,10 @@
         $("#check-in-click").click(function () {
             console.log("hello there");
         });
-
-
+        // Reward button 
+        $("#rewardsBtn").click(function () {
+            console.log("show me the goods!");
+        });
     </script>
 
 </html>
