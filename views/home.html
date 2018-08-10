@@ -57,6 +57,25 @@
 
     <body>
 
+        <div class="container valign-wrapper">
+
+
+            <div class="row">
+
+
+                <div class="col s12 ">
+
+
+                    <a class="waves-effect waves-light btn">
+                        <i id="check-in-click" class="material-icons">Check In</i>
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
 
 
 
@@ -64,10 +83,17 @@
     <script src="server.js"></script>
     <script>
 
-
+        // materialize initiation
         $(document).ready(function () {
             $('.sidenav').sidenav();
         });
+
+        // Onclick button
+
+        $("#check-in-click").click(function () {
+            console.log("hello there");
+        });
+
 
     </script>
 
