@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -31,16 +30,12 @@
                         <a href="/shop">Shop</a>
                     </li>
                 </ul>
-
             </div>
             <div class="col s2">
                 <p>Google</p>
             </div>
-
         </div>
-
     </nav>
-
     <ul class="sidenav" id="mobile-demo">
         <li>
             <a href="/">Sign in / Sign out</a>
@@ -53,6 +48,7 @@
         </li>
     </ul>
 </head>
+
     <body>
 <div class="row">
     <div class="col s7"></div>
@@ -74,71 +70,100 @@
             <div class="row">
 
 
-                <div class="col s12 ">
-
-
-                    <a class="waves-effect waves-light btn">
-                        <i id="check-in-click">Check In</i>
-                    </a>
-
-
-                </div>
-
-            </div>
+<body>
+    <div class="row">
+        <div class="col s7"></div>
+        <div class="col s3">
+            <h7>Your Total Points:</h7>
         </div>
-        <div class="row"></div>
-<div class="row"></div>
-<div class="row"></div>
-<div class="row"></div>
-<div class="row"></div>
-<div class="row"></div>
-        <div class="container valign-wrapper">
+        <div class="col s12" id="TotalPoints"></div>
+    </div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="container valign-wrapper">
         <div class="row">
+            <div class="col s12 ">
                 <a class="waves-effect waves-light btn">
+
                         <i  href="/shop" id="rewardsBtn">Rewards</i>
                     </a>
+
+                    <i id="check-in-click">Check In</i>
+                </a>
+            </div>
+
         </div>
+    </div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="row"></div>
+    <div class="container valign-wrapper">
+        <div class="row">
+            <a class="waves-effect waves-light btn">
+                <i href="/shop" id="rewardsBtn">Rewards</i>
+            </a>
         </div>
+    </div>
+</body>
+<script src="server.js"></script>
+<script>
+    // materialize initiation
+    $(document).ready(function () {
+        $('.sidenav').sidenav();
+    });
+    // Checkin button
+    $("#check-in-click").click(function () {
+        var geoLocater = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBpN9uvSZcmOLHtbehWtVy3ISrbBOa84Y0",
+            "method": "POST",
+            "headers": {
+                "Cache-Control": "no-cache",
+                "Postman-Token": "18e29c80-3d11-4662-b3bd-8014cad3785b"
+            }
+        }
+        $.ajax(geoLocater).done(function (response) {
+            var userLatitude = response.location.lat;
+            var userLongitude = response.location.lng;
+            console.log(userLatitude);
+            console.log(userLongitude);
 
-
-
-    </body>
-    <script src="server.js"></script>
-    <script>
-        // materialize initiation
-        $(document).ready(function () {
-            $('.sidenav').sidenav();
-        });
-
-        // Checkin button
-        $("#check-in-click").click(function () {
-
-            var geoLocater = {
+            var gymChecker = {
                 "async": true,
                 "crossDomain": true,
-                "url": "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyBpN9uvSZcmOLHtbehWtVy3ISrbBOa84Y0",
-                "method": "POST",
+                "url": "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + userLatitude + "," + userLongitude + "&radius=1610&type=gym&key=AIzaSyBpN9uvSZcmOLHtbehWtVy3ISrbBOa84Y0",
+                "method": "GET",
                 "headers": {
                     "Cache-Control": "no-cache",
-                    "Postman-Token": "18e29c80-3d11-4662-b3bd-8014cad3785b"
+                    "Postman-Token": "cfce8123-b7a9-4cd5-b92f-cadcd25ea9c3"
                 }
             }
 
-            $.ajax(geoLocater).done(function (response) {
 
-                var userLatitude = response.location.lat;
-                var userLongitude = response.location.lng;
+            $.ajax(gymChecker).done(function (response) {
 
-                console.log(userLatitude);
-                console.log(userLongitude);
+                response.results.forEach(gymName => {
+                    console.log(gymName);
+
+                    console.log(gymChecker.url);
+
+                });
             });
 
-            console.log("hello there");
         });
-        // Reward button 
-        $("#rewardsBtn").click(function () {
-            console.log("show me the goods!");
-        });
-    </script>
+        console.log("hello there");
+    });
+    // Reward button 
+    $("#rewardsBtn").click(function () {
+        console.log("show me the goods!");
+    });
+</script>
 
 </html>
