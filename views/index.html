@@ -31,8 +31,10 @@
             window.location = "http://localhost:3000/home"
           }
         </script>
-
-        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" onclick="Redirect()"></div>
+        <div class="row">
+          <div class="col-12"></div>
+          <div class="g-signin2 " data-onsuccess="onSignIn" data-theme="dark" onclick="Redirect()"></div>
+        </div>
         <script>
           function onSignIn(googleUser) {
             // Useful data for your client-side scripts:
@@ -137,5 +139,7 @@
 
 
 </body>
+
+<script src="server.js"></script>
 
 </html>
