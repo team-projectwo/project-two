@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="server.js"></script>
+
     <nav>
         <div class="row">
             <div class="nav-wrapper col s6">
@@ -73,8 +73,8 @@
                 <div class="container valign-wrapper">
                     <div class="row">
                         <div class="col s12 ">
-                            <a class="waves-effect waves-light btn">
-                                <i id="check-in-click" class="right"></i>Check In
+                            <a id="check-in-click" class="waves-effect waves-light btn">
+                                <i class="right"></i>Check In
                             </a>
                         </div>
                     </div>
@@ -94,35 +94,40 @@
 
 
             <script>
-                console.log("is this working")
-                // materialize initiation
-                $(document).ready(function () {
-                    $('.sidenav').sidenav();
-                });
 
 
                 // Checkin button
-                $("#check-in-click").click(function () {
+                $("#check-in-click").click(function getLocation() {
 
-                    console.log("hello there");
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(showPosition);
+                    } else {
+                        x.innerHTML = "Geolocation is not supported by this browser.";
+                    }
 
-                    // var x = document.getElementById("demo");
-
-                    // function getLocation() {
-                    //     if (navigator.geolocation) {
-                    //         navigator.geolocation.getCurrentPosition(showPosition);
-                    //     } else {
-                    //         x.innerHTML = "Geolocation is not supported by this browser.";
-                    //     }
-                    // }
-
-                    // function showPosition(position) {
-                    //     x.innerHTML = "Latitude: " + position.coords.latitude +
-                    //         "<br>Longitude: " + position.coords.longitude;
-                    // }
+                    function showPosition(position) {
 
 
 
+                        var userLat = (position.coords.latitude);
+                        var userLong = (position.coords.longitude);
+
+                        // console.log(userLat);
+                        // console.log(userLong);
+
+
+                        $.ajax({
+                            method: 'get',
+                            url: '/api/coords',
+                            data: {
+                                lat: userLat,
+                                long: userLong
+                            }
+                        }).then(function (response) {
+                            console.log(response)
+                        })
+
+                    };
                     // var gymChecker = {
                     //     "async": true,
                     //     "crossDomain": true,
@@ -150,9 +155,13 @@
 
 
                 // Reward button 
-                
+
+
+                // materialize initiation
+                $(document).ready(function () {
+                    $('.sidenav').sidenav();
+                });
+
             </script>
-
-
 
 </html>
