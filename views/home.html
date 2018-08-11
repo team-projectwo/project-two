@@ -106,18 +106,25 @@
 
                     function showPosition(position) {
 
+
+
                         var userLat = (position.coords.latitude);
                         var userLong = (position.coords.longitude);
 
+                        // console.log(userLat);
+                        // console.log(userLong);
+
+
                         $.ajax({
-                            url: "/api/coords",
-                            type: "POST",
-                            datatype: "json",
+                            method: 'get',
+                            url: '/api/coords',
                             data: {
                                 lat: userLat,
                                 long: userLong
                             }
-                        });
+                        }).then(function (response) {
+                            console.log(response)
+                        })
 
                     };
                     // var gymChecker = {
