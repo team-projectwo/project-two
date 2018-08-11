@@ -1,140 +1,191 @@
 <!DOCTYPE html>
-
-<html lang="en">
+<html>
 
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#2196F3">
+  <title>Go Or Owe</title>
 
-  <title>Go or Owe</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <meta name="google-signin-client_id" content="116803104355-mom8937cm08pjlvbb66aib3d8bcqsvnp.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="../public/js/index.js"></script>
-
+  <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
+  <link href="min/custom-min.css" type="text/css" rel="stylesheet">
 </head>
+<style>
+  .g-signin2 {
+    width: 100%;
+  }
 
-<body>
+  .g-signin2>div {
+    margin: 0 auto;
+  }
+</style>
 
-  <div class="jumbotron text-center">
-    <h1>Go or Owe</h1>
-    <p>Go to the Gym, or Pay Up!</p>
-    <form class="form-inline">
-      <div class="input-group">
-        <script>
-          function Redirect() {
-            window.location = "http://localhost:3000/home"
-          }
-        </script>
+<body id="top" class="scrollspy">
 
-        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" onclick="Redirect()"></div>
-        <script>
-          function onSignIn(googleUser) {
-            // Useful data for your client-side scripts:
-            var profile = googleUser.getBasicProfile();
-            // console.log('giving up ')
-            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-            console.log('Full Name: ' + profile.getName());
-            console.log('Given Name: ' + profile.getGivenName());
-            console.log('Family Name: ' + profile.getFamilyName());
-            console.log("Image URL: " + profile.getImageUrl());
-            console.log("Email: " + profile.getEmail());
+  <!-- Pre Loader -->
+  <div id="loader-wrapper">
+    <div id="loader"></div>
 
-            // The ID token you need to pass to your backend:
-            var id_token = googleUser.getAuthResponse().id_token;
-            // console.log("ID Token: " + id_token);
-          };
-          onSignIn();
-        </script>
-        <a href="#" onclick="signOut();">Sign out</a>
-        <script>
-          function signOut() {
-            var auth2 = gapi.auth2.getAuthInstance();
-            auth2.signOut().then(function () {
-              console.log('User signed out.');
-            });
-          }
-        </script>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
 
-
-
-
-      </div>
-  </div>
-  </form>
   </div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-8">
-        <h2>How It Works</h2>
-        <h4>Keep Yourself and your Friends accountable.</h4>
-        <p>This is a fun App to help build some comradery amongst your Friends. Create a Group, Set a Goal, and throw in some
-          $$.
-        </p>
+  <!--Navigation-->
+  <div class="navbar-fixed">
+    <nav id="nav_f" class="default_color" role="navigation">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#" id="logo-container" class="brand-logo">Logo</a>
+          <ul class="right hide-on-med-and-down">
+
+            </li>
+            <li>
+
+              <a href="#" data-activates="nav-mobile" class="button-collapse">
+                <i class="mdi-navigation-menu"></i>
+              </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!--Hero-->
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h1 class="text_h center header cd-headline letters type">
+        <span>Go Or Owe</span>
+
+      </h1>
+    </div>
+  </div>
+
+  <script>
+    function Redirect() {
+      window.location = "http://localhost:3000/home"
+    }
+  </script>
+
+  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light" onclick="Redirect()"></div>
+  <script>
+
+    function onSignIn(googleUser) {
+      // Useful data for your client-side scripts:
+      var profile = googleUser.getBasicProfile();
+      // console.log('giving up ')
+      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+      console.log('Full Name: ' + profile.getName());
+      console.log('Given Name: ' + profile.getGivenName());
+      console.log('Family Name: ' + profile.getFamilyName());
+      console.log("Image URL: " + profile.getImageUrl());
+      console.log("Email: " + profile.getEmail());
+
+      // The ID token you need to pass to your backend:
+      var id_token = googleUser.getAuthResponse().id_token;
+      // console.log("ID Token: " + id_token);
+    };
+    onSignIn();
+  </script>
+
+  <br>
+  <br>
+  <br>
+
+  <!--Intro and service-->
+  <div id="intro" class="section scrollspy">
+    <div class="container">
 
 
+      <div class="col s12 m4 l4">
+        <div class="center promo promo-example">
+          <i class="mdi-image-flash-on"></i>
+          <h5 class="promo-caption">How It Works</h5>
+          <p class="light center">Hit the Gym and get Rewarded! Check in everytime you go to the Gym and earn Points you can redeem in our Store!</p>
+        </div>
       </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-signal logo"></span>
-      </div>
+
+    </div>
+  </div>
+
+
+  <!--Work-->
+
+  <!--Parallax-->
+  <div class="parallax-container">
+    <div class="parallax">
+      <img src="img/parallax1.png">
     </div>
   </div>
 
 
 
-  <div class="container-fluid text-center bg-grey">
-
-
-
-
-    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-      <h2>What our customers say</h2>
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <h4>"This App is awesome!"
-            <br>
-            <span style="font-style:normal;">Lebron James, Professional NBA Athlete</span>
-          </h4>
+  <!--Footer-->
+  <footer id="contact" class="page-footer default_color scrollspy">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <form class="col s12" action="contact.php" method="post">
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="mdi-action-account-circle prefix white-text"></i>
+                <input id="icon_prefix" name="name" type="text" class="validate white-text">
+                <label for="icon_prefix" class="white-text">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <i class="mdi-communication-email prefix white-text"></i>
+                <input id="icon_email" name="email" type="email" class="validate white-text">
+                <label for="icon_email" class="white-text">Email-id</label>
+              </div>
+              <div class="input-field col s12">
+                <i class="mdi-editor-mode-edit prefix white-text"></i>
+                <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
+                <label for="icon_prefix2" class="white-text">Message</label>
+              </div>
+              <div class="col offset-s7 s5">
+                <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
+                  <i class="mdi-content-send right white-text"></i>
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="item">
-          <h4>"One word... AMAZE-BALLS!!"
-            <br>
-            <span style="font-style:normal;">Jan Levinson, VP of Sales, Dunder Mifflin</span>
-          </h4>
+        <div class="col l3 s12">
+
+
+          </li>
+          </ul>
         </div>
-        <div class="item">
-          <h4>"Could I... BE any more happy with this app?"
-            <br>
-            <span style="font-style:normal;">Butterbean, Boxer </span>
-          </h4>
+        <div class="col l3 s12">
+
+          <ul>
+            <li>
+
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
     </div>
+    <div class="footer-copyright default_color">
+      <div class="container">
 
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="min/plugin-min.js"></script>
+  <script src="min/custom-min.js"></script>
 
 </body>
 
