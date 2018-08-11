@@ -15,7 +15,6 @@
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="../public/js/index.js"></script>
 
 </head>
 
@@ -51,7 +50,7 @@
             var id_token = googleUser.getAuthResponse().id_token;
             // console.log("ID Token: " + id_token);
           };
-          onSignIn();
+
         </script>
         <a href="#" onclick="signOut();">Sign out</a>
         <script>
@@ -140,6 +139,5 @@
 
 </body>
 
-<script src="server.js"></script>
 
 </html>
