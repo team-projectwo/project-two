@@ -1,5 +1,9 @@
 var db = require("../models");
 
+var request = require("request");
+
+var points = 0;
+
 module.exports = function (app) {
   // Get all examples
   app.get("/api/examples", function (req, res) {
@@ -15,12 +19,73 @@ module.exports = function (app) {
     });
   });
 
-  app.get("http://localhost:3000/api/coords", function (req, res) {
-    var lat = req.body.lat;
-    var lng = req.body.long;
+  app.get("/api/coords", function (req, res) {
 
-    res.json(lat);
-    res.json(lng);
+    var lat = (req.query.lat);
+    var lng = (req.query.long);
+
+    var location = (lat + "," + lng);
+
+
+
+    var options = {
+      method: "GET",
+      url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json",
+      qs:
+      {
+        location: location,
+        radius: "1000",
+        type: "gym",
+        output: "json",
+        key: "AIzaSyBpN9uvSZcmOLHtbehWtVy3ISrbBOa84Y0"
+      },
+      headers:
+      {
+        "Postman-Token": "63243cff-2a5f-487a-b563-6d8d56d70bcf",
+        "Cache-Control": "no-cache"
+      }
+    };
+
+    request(options, function (error, response, body) {
+      if (error) { throw new Error(error); }
+
+      var body2 = JSON.parse(body);
+
+      console.log(body2.results);
+
+      if ([body2.results] < 1) {
+
+        return;
+      } else {
+        points = points + 5;
+
+        console.log(points);
+
+        console.log("woop");
+      }
+
+
+
+
+
+
+    });
+
+
+
+
+
+
+  });
+
+
+
+
+
+  app.get("/test", function (req, res) {
+
+
+    res.json({ msg: "test" });
   });
 
   // Delete an example by id
