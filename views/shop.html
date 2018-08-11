@@ -13,6 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title">
     <nav>
         <div class="row">
             <div class="nav-wrapper col s10">
@@ -55,19 +56,162 @@
 </head>
 
 <body>
+    <div class="row">
+        <div class="col s2"></div>
+        <div class="center-align col s8">
+            <h4>Redeem Points</h4>
+        </div>
+        <div class="col s2"></div>
+    </div>
+    <ul id="tabs-swipe-demo" class="tabs">
+        <li class="tab col s3 center-align">
+            <a href="#swipe-1">Gift Cards</a>
+        </li>
+        <li class="tab col s3 center-align">
+            <a class="active" href="#swipe-2">apparel</a>
+        </li>
+        <li class="tab col s3 center-align">
+            <a href="#swipe-3">Gym Equipment</a>
+        </li>
+    </ul>
+    <div id="swipe-1" class="col s12">
 
+        <div class="row">
+            <div class="col s6">
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4" id="protein">Protein Foundary</a>
+                </div>
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4" value="5 " id="visa">Visa</a>
+                </div>
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4" id="cookie">Cookie Cumbl</a>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4 center-align" id="scheels">Scheels</a>
+                </div>
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4 center-align" id="gnc">GNC</a>
+                </div>
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4 center-align" id="amazon">Amazon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="swipe-2" class="col s12 ">
+        <div class="row">
+            <div class="col s6">
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4" id="nike">Nike</a>
+                </div>
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4" id="UA">Under Armor</a>
+                </div>
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4" id="lulu">Lulu lemon</a>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4 center-align" id="adidas">Adidas</a>
+                </div>
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4 center-align" id="Rebok">Rebok</a>
+                </div>
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4 center-align" id="Puma">Puma</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="swipe-3" class="col s12">
+        <div class="row">
+            <div class="col s6 center-align">
+                <div class="divider center-align"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4" value="5" id="bands">Bands</a>
+                </div>
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4" id="Dumbbell">Dumbell</a>
+                </div>
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4" id="KettleBell">KettleBell</a>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4 center-align" id="Jump">Jump Rope</a>
+                </div>
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4 center-align" id="bike">Bike</a>
+                </div>
+                <div class="divider"></div>
+                <div class="section row center-align" id="Btnrow">
+                    <a class="waves-effect waves-light btn-small col s4 center-align" id="tread">Treadmill</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
 </body>
+<style>
+    .carousel .carousel-item {
+        width: 100%;
+        ;
+    }
+
+    #product {
+        margin-left: 32%
+    }
+</style>
 <script src="server.js"></script>
 <script>
+    
+    $("#protein").click(function () {
+        
+        console.log($("#protein"))
+console.log("hello there")}),
+
+
+
+
+
+
+
+
+
 
 
     $(document).ready(function () {
         $('.sidenav').sidenav();
     });
-
+    $(document).ready(function () {
+        $('ul.tabs').tabs({
+            swipeable: true,
+            responsiveThreshold: 1920
+        });
+    });
 </script>
 
 </html>
