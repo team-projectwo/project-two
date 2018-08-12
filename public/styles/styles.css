@@ -124,5 +124,9 @@
 #Btnrow{
     height: 150px;
 }
-
+#navbar-image {
+    position: relative;
+    left: 60px;
+    top: 8px;
+}
   
