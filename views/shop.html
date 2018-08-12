@@ -9,15 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Materialzie -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <!-- <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title">
+
     <nav>
         <div class="row">
-            <div class="nav-wrapper col s10">
-                <a href="#!" class="brand-logo">Gym Go</a>
+            <div class="nav-wrapper col s6">
+
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                     <i class="material-icons">menu</i>
                 </a>
@@ -32,14 +32,19 @@
                         <a href="/shop">Shop</a>
                     </li>
                 </ul>
-
             </div>
-            <div class="col s2">
-                <p>Google</p>
+            <div class="col s2 flow-text">
+                <a href="#!" class="brand-logo">GG</a>
             </div>
+            <div class="col s2" id="navbar-image">
 
+                <Ui>
+                    <a href="#user">
+                        <img class="circle responsive-img" src="https://lh4.googleusercontent.com/-blYAQ-Bage8/AAAAAAAAAAI/AAAAAAAAAVY/om2wcHwR_O8/s96-c/photo.jpg">
+                    </a>
+                </Ui>
+            </div>
         </div>
-
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
@@ -187,11 +192,12 @@
 </style>
 <script src="server.js"></script>
 <script>
-    
+
     $("#protein").click(function () {
-        
+
         console.log($("#protein"))
-console.log("hello there")}),
+        console.log("hello there")
+    }),
 
 
 
@@ -203,9 +209,9 @@ console.log("hello there")}),
 
 
 
-    $(document).ready(function () {
-        $('.sidenav').sidenav();
-    });
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
     $(document).ready(function () {
         $('ul.tabs').tabs({
             swipeable: true,

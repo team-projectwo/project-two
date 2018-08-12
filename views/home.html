@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title">
 
     <nav>
         <div class="row">
@@ -32,14 +33,16 @@
                     </li>
                 </ul>
             </div>
-            <div class="col s2">
+            <div class="col s2 flow-text">
                 <a href="#!" class="brand-logo">GG</a>
             </div>
-            <div class="col s2">
-                <span class="flow-text">Points</span>
-            </div>
-            <div class="col s2">
-                    
+            <div class="col s2" id="navbar-image">
+
+                <Ui>
+                    <a href="#user">
+                        <img class="circle responsive-img" src="https://lh4.googleusercontent.com/-blYAQ-Bage8/AAAAAAAAAAI/AAAAAAAAAVY/om2wcHwR_O8/s96-c/photo.jpg">
+                    </a>
+                </Ui>
             </div>
         </div>
     </nav>
@@ -85,16 +88,13 @@
                 <div class="container valign-wrapper">
                     <div class="row">
                         <a href="/shop" class="waves-effect waves-light btn">
-                            <i  class="right"></i>Rewards
+                            <i class="right"></i>Rewards
                         </a>
                     </div>
                 </div>
             </body>
 
-
-
             <script>
-
 
                 // Checkin button
                 $("#check-in-click").click(function getLocation() {
@@ -112,8 +112,9 @@
                         var userLat = (position.coords.latitude);
                         var userLong = (position.coords.longitude);
 
-                        // console.log(userLat);
-                        // console.log(userLong);
+
+                        console.log(userLat);
+                        console.log(userLong);
 
 
                         $.ajax({
@@ -128,34 +129,8 @@
                         })
 
                     };
-                    // var gymChecker = {
-                    //     "async": true,
-                    //     "crossDomain": true,
-                    //     "url": "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + userLatitude + "," + userLongitude + "&radius=1610&type=gym&key=AIzaSyBpN9uvSZcmOLHtbehWtVy3ISrbBOa84Y0",
-                    //     "method": "GET",
-                    //     "headers": {
-                    //         "Cache-Control": "no-cache",
-                    //         "Postman-Token": "cfce8123-b7a9-4cd5-b92f-cadcd25ea9c3"
-                    //     }
-                    // }
-
-
-                    // $.ajax(gymChecker).done(function (response) {
-
-                    //     response.results.forEach(gymName => {
-                    //         console.log(gymName);
-
-                    //         console.log(gymChecker.url);
-
-                    //     });
-                    // });
-
 
                 });
-
-
-                // Reward button 
-
 
                 // materialize initiation
                 $(document).ready(function () {

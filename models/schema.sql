@@ -19,7 +19,14 @@ CREATE table userTable
     (255) NOT NULL,
     PRIMARY KEY
     (id)
+
 );
+
+
+    USE project2;
+
+    ALTER TABLE userTable
+ADD signInId VARCHAR(30) NOT NULL;
 
 
 
