@@ -19,10 +19,12 @@ CREATE table userTable
 );
 
 
+
 USE project2;
 
 ALTER TABLE userTable
 ADD signInId VARCHAR(30) NOT NULL;
+
 
 
 
