@@ -78,7 +78,6 @@ module.exports = function (app) {
 
 
   app.get("/api/userInfo", function (req, res) {
-    console.log("hello1");
 
     var firstName = (req.query.fn);
     var lastName = (req.query.ln);
@@ -91,9 +90,12 @@ module.exports = function (app) {
       var userRecord = [
         [firstName, lastName, email, profileImage, signInId]
       ];
+      // var signInIdRecord = [
+      //   [signInId]
+      // ];
       console.log("Connected!");
-      // var sql = "INSERT INTO userTable (firstName, lastName, email, profileImage, signInId) VALUES ? WHERE NOT EXISTS (SELECT signInId FROM userTable WHERE signInId = " + signInId + " LIMIT 1)";
-      var sql = "INSERT IGNORE INTO userTable (firstName, lastName, email, profileImage, signInId) VALUES ?";
+      // var sql = "INSERT INTO userTable (firstName, lastName, email, profileImage, signInId) VALUES ? WHERE NOT EXISTS (SELECT * FROM userTable WHERE signInId = ? LIMIT 1)";
+      var sql = "INSERT INTO userTable (firstName, lastName, email, profileImage, signInId) VALUES ?";
       con.query(sql, [userRecord], function (err, result) {
         if (err) { throw err; }
         console.log("1 record inserted");
