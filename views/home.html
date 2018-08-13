@@ -68,8 +68,12 @@
 
 
             <body>
-                <div class="row"></div>
-                <div class="row"></div>
+                <div class="row">
+                    <div class="col s6">
+                        <p class="h1">Points</p>
+                    </div>
+                    <div class="col s6" id="point-div"></div>
+                </div>
                 <div class="row"></div>
                 <div class="row"></div>
                 <div class="row"></div>
@@ -95,19 +99,38 @@
             </body>
 
             <script>
+                var signInId;
+
+                $(document).ready(function () {
+                    var urlParams = new URLSearchParams(window.location.search);
+
+                    var entries = urlParams.entries();
+                    for (pair of entries) {
+                        // console.log(pair[0], pair[1]);
+
+                        signInId = pair[1];
+
+                        console.log(signInId);
+                    }
+                });
 
                 // Checkin button
+
                 $("#check-in-click").click(function getLocation() {
+
+
 
                     if (navigator.geolocation) {
                         navigator.geolocation.getCurrentPosition(showPosition);
+
+
                     } else {
                         x.innerHTML = "Geolocation is not supported by this browser.";
                     }
 
                     function showPosition(position) {
 
-
+                        console.log(signInId);
 
                         var userLat = (position.coords.latitude);
                         var userLong = (position.coords.longitude);
@@ -116,6 +139,13 @@
                         console.log(userLat);
                         console.log(userLong);
 
+                        // $.ajax({
+                        //     method: 'get',
+                        //     url: 'api/userInfo',
+
+                        // }).then(function (response) {
+
+                        // })
 
                         $.ajax({
                             method: 'get',
@@ -125,8 +155,21 @@
                                 long: userLong
                             }
                         }).then(function (response) {
+
+                        });
+
+                        $.ajax({
+                            method: 'post',
+                            url: '/api/addPoints',
+                            data: {
+                                signInId: signInId
+                            }
+
+
+                        }).then(function (response) {
                             console.log(response)
-                        })
+
+                        });
 
                     };
 

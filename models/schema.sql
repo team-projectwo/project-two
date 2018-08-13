@@ -24,5 +24,12 @@ USE project2;
 ALTER TABLE userTable
 ADD signInId VARCHAR(30) NOT NULL;
 
+USE project2;
+
+ALTER TABLE userTable DROP COLUMN id;
+
+ALTER TABLE userTable
+  ADD PRIMARY KEY (signInId); 
+
 
 
