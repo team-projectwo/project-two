@@ -119,7 +119,7 @@
     margin-left: 32%;
 }
 #protein{
-    margin-left: 10%;
+    margin-left: 32%;
 }
 #Btnrow{
     height: 150px;
@@ -133,10 +133,3 @@
     margin-left: 40%;
 }
   
-#proteinImg{
-    height: 100%;
-}
-html, body {
-    margin: 0;
-    height: 100%;
-}
