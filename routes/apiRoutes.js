@@ -104,7 +104,9 @@ module.exports = function (app) {
 
 
       console.log("Connected!");
+
       // var sql = "INSERT INTO userTable (firstName, lastName, email, profileImage, signInId) VALUES ? WHERE NOT EXISTS (SELECT * FROM userTable WHERE signInId = ? LIMIT 1)";
+
       var sql = "INSERT IGNORE INTO userTable (firstName, lastName, email, profileImage, signInId) VALUES ?";
       con.query(sql, [userRecord], function (err) {
         if (err) { throw err; }

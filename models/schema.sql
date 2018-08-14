@@ -20,7 +20,12 @@ CREATE table userTable
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+
+>>>>>>> e07ef4921d1a73c9720a4f0428d715d261d43428
 USE project2;
 
 ALTER TABLE userTable
@@ -34,5 +39,9 @@ ALTER TABLE userTable
   ADD PRIMARY KEY (signInId); 
 
 
+<<<<<<< HEAD
 >>>>>>> aab4276f1a19d3f57e20b8aeb2a30b56b41a444d
+=======
+
+>>>>>>> e07ef4921d1a73c9720a4f0428d715d261d43428
 
