@@ -29,27 +29,6 @@
   .g-signin2>div {
     margin: 0 auto;
   }
-
-  a {
-    background-color: #D4483E;
-    box-shadow: 0 5px 0 #D4483E;
-    color: white;
-    padding: .2em 1.0em;
-    position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-
-  a:hover {
-    background-color: #D4483E;
-  }
-
-  a:active {
-    box-shadow: none;
-    top: 5px;
-  }
-
-  /* Non-Demo Styles */
 </style>
 
 <body id="top" class="scrollspy">
@@ -68,13 +47,15 @@
     <nav id="nav_f" class="default_color" role="navigation">
       <div class="container">
         <div class="nav-wrapper">
-
+          <a href="#" id="logo-container" class="brand-logo">Logo</a>
           <ul class="right hide-on-med-and-down">
 
             </li>
             <li>
 
-
+              <a href="#" data-activates="nav-mobile" class="button-collapse">
+                <i class="mdi-navigation-menu"></i>
+              </a>
         </div>
       </div>
     </nav>
@@ -98,42 +79,54 @@
     }
   </script>
 
-  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light" onclick="Redirect()"></div>
+  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light"></div>
   <script>
+
+
+    // if they are succesfully signed in this function will run
     function onSignIn(googleUser) {
+
       // Useful data for your client-side scripts:
       var profile = googleUser.getBasicProfile();
       // console.log('giving up ')
-      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-      console.log('Full Name: ' + profile.getName());
-      console.log('Given Name: ' + profile.getGivenName());
-      console.log('Family Name: ' + profile.getFamilyName());
-      console.log("Image URL: " + profile.getImageUrl());
-      console.log("Email: " + profile.getEmail());
+      var signInId = (profile.getId()); // Don't send this directly to your server!
+      // console.log('Full Name: ' + profile.getName());
+      var firstName = (profile.getGivenName());
+      var lastName = (profile.getFamilyName());
+      var profileImage = (profile.getImageUrl());
+      var email = (profile.getEmail());
 
       // The ID token you need to pass to your backend:
       var id_token = googleUser.getAuthResponse().id_token;
       // console.log("ID Token: " + id_token);
+
+      if (googleUser) {
+
+
+        $.ajax({
+          method: 'get',
+          url: '/api/userInfo',
+          datatype: 'json',
+          data: {
+            fn: firstName,
+            ln: lastName,
+            ema: email,
+            pi: profileImage,
+            sid: signInId
+          }
+        }).then(function (response) {
+          console.log(response)
+          window.location = '/home?sid=' + response.sid
+        });
+
+      }
+
+
     };
-    onSignIn();
 
 
   </script>
 
-  <br>
-
-  <div style="text-align:center">
-    <a href onclick="signOut();"="#">Sign Out </a>
-    <!-- more links here -->
-  </div>
-  <script>
-    function signOut() {
-      var auth2 = gapi.auth2.getAuthInstance();
-      auth2.signOut().then(function () {
-        console.log('User signed out.');
-      });
-    }
-  </script>
   <br>
   <br>
   <br>
@@ -154,6 +147,15 @@
     </div>
   </div>
 
+
+  <!--Work-->
+
+  <!--Parallax-->
+  <!-- <div class="parallax-container">
+    <div class="parallax">
+      <img src="img/parallax1.png">
+    </div>
+  </div> -->
 
 
 
