@@ -10,7 +10,7 @@ var mysql = require("mysql");
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Royall14",
+  password: "root",
   database: "project2",
   multipleStatements: true
 });
@@ -30,7 +30,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get("/api/coords", function (req) {
+  app.get("/api/coords", function (req, res) {
 
     var lat = (req.query.lat);
     var lng = (req.query.long);
@@ -57,7 +57,7 @@ module.exports = function (app) {
       }
     };
 
-    request(options, function (error, body) {
+    request(options, function (error, response, body) {
       if (error) { throw new Error(error); }
 
       var body2 = JSON.parse(body);
@@ -79,19 +79,15 @@ module.exports = function (app) {
   });
 
 
-
   app.get("/api/userInfo", function (req, res) {
-
 
     var firstName = (req.query.fn);
     var lastName = (req.query.ln);
     var email = (req.query.ema);
     var profileImage = (req.query.pi);
-
     signInId = (req.query.sid);
 
     res.json({ sid: signInId });
-
 
 
 
@@ -105,12 +101,9 @@ module.exports = function (app) {
 
 
       console.log("Connected!");
-
       // var sql = "INSERT INTO userTable (firstName, lastName, email, profileImage, signInId) VALUES ? WHERE NOT EXISTS (SELECT * FROM userTable WHERE signInId = ? LIMIT 1)";
-
       var sql = "INSERT IGNORE INTO userTable (firstName, lastName, email, profileImage, signInId) VALUES ?";
       con.query(sql, [userRecord, signInId], function (err, result) {
-
         if (err) { throw err; }
         console.log("1 record inserted");
       });

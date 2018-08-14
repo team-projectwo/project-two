@@ -19,8 +19,6 @@ CREATE table userTable
 );
 
 
-
-
 USE project2;
 
 ALTER TABLE userTable
@@ -30,9 +28,10 @@ USE project2;
 
 ALTER TABLE userTable DROP COLUMN id;
 
+USE project2;
+
 ALTER TABLE userTable
   ADD PRIMARY KEY (signInId); 
-
 
 
 
