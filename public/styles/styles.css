@@ -132,4 +132,8 @@
 #redeem{
     margin-left: 40%;
 }
-  
+#sign-out {
+    position: relative;
+    right: 320px;
+}
+
