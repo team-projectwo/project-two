@@ -10,7 +10,7 @@ var mysql = require("mysql");
 var con = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "root",
+  password: "Royall14",
   database: "project2",
   multipleStatements: true
 });
@@ -103,7 +103,7 @@ module.exports = function (app) {
       console.log("Connected!");
       // var sql = "INSERT INTO userTable (firstName, lastName, email, profileImage, signInId) VALUES ? WHERE NOT EXISTS (SELECT * FROM userTable WHERE signInId = ? LIMIT 1)";
       var sql = "INSERT IGNORE INTO userTable (firstName, lastName, email, profileImage, signInId) VALUES ?";
-      con.query(sql, [userRecord, signInId], function (err, result) {
+      con.query(sql, [userRecord, signInId], function (err) {
         if (err) { throw err; }
         console.log("1 record inserted");
       });
@@ -124,7 +124,7 @@ module.exports = function (app) {
     // signInId = "100636233918382122796";
 
     var sql = "UPDATE userTable SET points = ? WHERE signInId = ?";
-    con.query(sql, [points, signInId], function (err, result) {
+    con.query(sql, [points, signInId], function (err) {
       if (err) { throw err; }
       console.log("1 record inserted");
 
