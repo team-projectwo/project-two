@@ -98,7 +98,6 @@ var handleDeleteBtnClick = function() {
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
-
 gapi.load("auth2", function() {
   gapi.auth2.init();
 });
