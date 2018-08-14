@@ -99,6 +99,38 @@
                         </a>
                     </div>
                 </div>
+                <div class="input-field col s12">
+
+                    <select multiple>
+                        <option value="" disabled selected></option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+
+                    </select>
+                    <label>Have you reached the goals you set out to achieve?</label>
+                </div>
+
+                <div class="input-field col s12">
+                    <select multiple>
+                        <option value="" disabled selected></option>
+                        <option value="1">0-30 Minutes</option>
+                        <option value="2">1-2 Hours</option>
+                        <option value="3">Other</option>
+
+                    </select>
+                    <label>How Long Was Your Workout?</label>
+                </div>
+
+                <div class="input-field col s12">
+
+                </div>
+
+                <div class="input-field col s12 m6">
+
+                </div>
+                <div class="input-field col s12 m6">
+
+                </div>
             </body>
 
             <script>
@@ -150,6 +182,7 @@
                 // materialize initiation
                 $(document).ready(function () {
                     $('.sidenav').sidenav();
+                    $('select').formSelect();
                 });
             </script>
 
