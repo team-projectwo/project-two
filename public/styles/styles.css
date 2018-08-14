@@ -24,6 +24,7 @@
     .logo {
         color: #282B30;
         font-size: 200px;
+        left: 38%;
     }
   
   .thumbnail {
@@ -132,7 +133,19 @@
 #redeem{
     margin-left: 40%;
 }
+#sign-out {
+    position: relative;
+    right: 320px;
+}
 #points{
-    margin-left: 40px;
+    margin-left: 62%;
+}
+.carousel .carousel-item {
+    width: 100%;
+    ;
+}
+
+#product {
+    margin-left: 32%
 }
 

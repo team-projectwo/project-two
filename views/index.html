@@ -2,26 +2,37 @@
 <html>
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="#2196F3">
-  <title>Go Or Owe</title>
-
-  <!-- CSS  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta name="google-signin-client_id" content="116803104355-mom8937cm08pjlvbb66aib3d8bcqsvnp.apps.googleusercontent.com">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
-  <link href="min/custom-min.css" type="text/css" rel="stylesheet"> -->
-
+  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Saira+Semi+Condensed" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title">
 
 
 </head>
+
 <style>
+  h3 {
+    color: white;
+    font-size: 45px;
+    font-family: 'Black Ops One', cursive;
+    text-shadow: 0 5px 0 black;
+  }
+
+
+
+
+  h5 {
+    color: white;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    text-shadow: 0 3px 0 black;
+  }
+
+
+
   .g-signin2 {
     width: 100%;
   }
@@ -31,193 +42,190 @@
   }
 </style>
 
-<body id="top" class="scrollspy">
-
-  <!-- Pre Loader -->
-  <div id="loader-wrapper">
-    <div id="loader"></div>
-
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-
-  </div>
-
-  <!--Navigation-->
-  <div class="navbar-fixed">
-    <nav id="nav_f" class="default_color" role="navigation">
-      <div class="container">
-        <div class="nav-wrapper">
-          <a href="#" id="logo-container" class="brand-logo">Logo</a>
-          <ul class="right hide-on-med-and-down">
-
-            </li>
-            <li>
-
-              <a href="#" data-activates="nav-mobile" class="button-collapse">
-                <i class="mdi-navigation-menu"></i>
-              </a>
-        </div>
-      </div>
-    </nav>
-  </div>
-
-  <!--Hero-->
-
-
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <h1 class="text_h center header cd-headline letters type">
-        <span>Go Or Owe</span>
-
-      </h1>
+<body>
+  <nav data-activates="mobile-demo" class="button-collapse">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li>
+          <a href="sass.html">Sass</a>
+        </li>
+        <li>
+          <a href="badges.html">Components</a>
+        </li>
+        <li>
+          <a href="collapsible.html">Javascript</a>
+        </li>
+        <li>
+          <a href="mobile.html">Mobile</a>
+        </li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li>
+          <a href="sass.html">Sass</a>
+        </li>
+        <li>
+          <a href="badges.html">Components</a>
+        </li>
+        <li>
+          <a href="collapsible.html">Javascript</a>
+        </li>
+        <li>
+          <a href="mobile.html">Mobile</a>
+        </li>
+      </ul>
     </div>
-  </div>
-
-  <script>
-    function Redirect() {
-      window.location = "http://localhost:3000/home"
-    }
+  </nav>
+  <script type="text/javascript">
+    $(".button-collapse").sideNav();
   </script>
 
-  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light"></div>
-  <script>
 
 
-    // if they are succesfully signed in this function will run
-    function onSignIn(googleUser) {
+  <div class="slider fullscreen">
+    <ul class="slides">
+      <li>
+        <img src="https://images.pexels.com/photos/415261/pexels-photo-415261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+        <!-- random image -->
+        <div class="caption center-align">
 
-      // Useful data for your client-side scripts:
-      var profile = googleUser.getBasicProfile();
-      // console.log('giving up ')
-      var signInId = (profile.getId()); // Don't send this directly to your server!
-      // console.log('Full Name: ' + profile.getName());
-      var firstName = (profile.getGivenName());
-      var lastName = (profile.getFamilyName());
-      var profileImage = (profile.getImageUrl());
-      var email = (profile.getEmail());
+          <h3>Go Or Owe</h3>
 
-      // The ID token you need to pass to your backend:
-      var id_token = googleUser.getAuthResponse().id_token;
-      // console.log("ID Token: " + id_token);
+          <h5>Hit the Gym. Get Rewards.</h5>
+          <br>
+          <br>
 
-      if (googleUser) {
+          <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light" onclick="Redirect()"></div>
 
+          <br>
 
-        $.ajax({
-          method: 'get',
-          url: '/api/userInfo',
-          datatype: 'json',
-          data: {
-            fn: firstName,
-            ln: lastName,
-            ema: email,
-            pi: profileImage,
-            sid: signInId
-          }
-        }).then(function (response) {
-          console.log(response)
-          window.location = '/home?sid=' + response.sid
-        });
+          <script>
+            function onSignIn(googleUser) {
 
-      }
+              // Useful data for your client-side scripts:
+              var profile = googleUser.getBasicProfile();
+              // console.log('giving up ')
+              var signInId = (profile.getId()); // Don't send this directly to your server!
+              // console.log('Full Name: ' + profile.getName());
+              var firstName = (profile.getGivenName());
+              var lastName = (profile.getFamilyName());
+              var profileImage = (profile.getImageUrl());
+              var email = (profile.getEmail());
+
+              // The ID token you need to pass to your backend:
+              var id_token = googleUser.getAuthResponse().id_token;
+              // console.log("ID Token: " + id_token);
+
+              if (googleUser) {
 
 
-    };
+                $.ajax({
+                  method: 'get',
+                  url: '/api/userInfo',
+                  datatype: 'json',
+                  data: {
+                    fn: firstName,
+                    ln: lastName,
+                    ema: email,
+                    pi: profileImage,
+                    sid: signInId
+                  }
+                }).then(function (response) {
+                  console.log(response)
+                  window.location = '/home?sid=' + response.sid
+                });
+
+              }
 
 
-  </script>
+            };
 
-  <br>
-  <br>
-  <br>
+          </script>
+          <a href="#" onclick="signOut();">Sign out</a>
+          <script>
+            function signOut() {
+              var auth2 = gapi.auth2.getAuthInstance();
+              auth2.signOut().then(function () {
+                console.log('User signed out.');
+              });
+            }
 
-  <!--Intro and service-->
-  <div id="intro" class="section scrollspy">
-    <div class="container">
-
-
-      <div class="col s12 m4 l4">
-        <div class="center promo promo-example">
-          <i class="mdi-image-flash-on"></i>
-          <h5 class="promo-caption">How It Works</h5>
-          <p class="light center">Hit the Gym and get Rewarded! Check in everytime you go to the Gym and earn Points you can redeem in our Store!</p>
+          </script>
         </div>
-      </div>
+      </li>
+      <li>
+        <img src="https://images.pexels.com/photos/290416/pexels-photo-290416.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
 
+
+
+
+        <!-- random image -->
+        <div class="caption right-align">
+          <h3>Commitment.</h3>
+          <h5>We want to reward those who commit to hitting the Gym</h5>
+          <br>
+          <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light" onclick="Redirect()"></div>
+          <br>
+          <a href="#" id="sign-out" class="center-align" onclick="signOut();">Sign out</a>
+
+        </div>
+      </li>
+      <li>
+        <img src="https://images.pexels.com/photos/897061/pexels-photo-897061.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+
+        <!-- random image -->
+        <div class="caption right-align">
+          <h3>The Store.</h3>
+          <h5>Earn points by checking in everytime you go to the gym. Then check out our store to see what products you can earn!
+            It's Simple.</h5>
+
+          <br>
+
+          <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light"></div>
+
+          <br>
+          <a href="#" id="sign-out" class="center-align" onclick="signOut();">Sign out</a>
+
+      </li>
+    </ul>
     </div>
-  </div>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.slider').slider({ full_width: true });
+      });
+    </script>
 
 
-  <!--Work-->
 
-  <!--Parallax-->
-  <!-- <div class="parallax-container">
-    <div class="parallax">
-      <img src="img/parallax1.png">
-    </div>
+
+
+
+
+    <!-- <div class="carousel carousel-slider">
+    <a class="carousel-item" href="#one!">
+      <img src="../public/assets/beach.jpg">
+    </a>
+    <a class="carousel-item" href="#two!">
+      <img src="../public/assets/beach.jpg">
+    </a>
+    <a class="carousel-item" href="#three!">
+      <img src="../public/assets/equipment.jpg">
+    </a>
+    <a class="carousel-item" href="#four!">
+      <img src="images/4.jpg">
+    </a>
   </div> -->
 
+    <script type="text/javascript">
+      $('.carousel.carousel-slider').carousel({ full_width: true });
+    </script>
 
+    <footer class="page-footer footer-fixed gradient-45deg-purple-deep-orange">
+    </footer>
 
-  <!--Footer-->
-  <footer id="contact" class="page-footer default_color scrollspy">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <form class="col s12" action="contact.php" method="post">
-            <div class="row">
-              <div class="input-field col s6">
-                <i class="mdi-action-account-circle prefix white-text"></i>
-                <input id="icon_prefix" name="name" type="text" class="validate white-text">
-                <label for="icon_prefix" class="white-text">First Name</label>
-              </div>
-              <div class="input-field col s6">
-                <i class="mdi-communication-email prefix white-text"></i>
-                <input id="icon_email" name="email" type="email" class="validate white-text">
-                <label for="icon_email" class="white-text">Email-id</label>
-              </div>
-              <div class="input-field col s12">
-                <i class="mdi-editor-mode-edit prefix white-text"></i>
-                <textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
-                <label for="icon_prefix2" class="white-text">Message</label>
-              </div>
-              <div class="col offset-s7 s5">
-                <button class="btn waves-effect waves-light red darken-1" type="submit">Submit
-                  <i class="mdi-content-send right white-text"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="col l3 s12">
-
-
-          </li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-
-          <ul>
-            <li>
-
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright default_color">
-      <div class="container">
-
-
-      </div>
-    </div>
-  </footer>
-
-
-  <!--  Scripts-->
-  <!-- <script src="min/plugin-min.js"></script>
-  <script src="min/custom-min.js"></script> -->
 
 </body>
 

@@ -11,7 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="/ "></script>
+    <script type="text/javascript" src="../shop.js "></script>
+    <!-- <link rel="text/javascript" href="shop.js" media="screen" title="no title"> -->
     <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title">
     <nav>
         <div class="row">
@@ -32,7 +33,7 @@
                 </ul>
             </div>
             <div class="col s2 flow-text">
-                <a href="#!" class="brand-logo">GG</a>
+                <a href="#!" class="brand-logo">Go or Owe</a>
                 <a class="waves-effect waves-light btn blue accent-4" id="points"><span>200</span></a>
             </div>
             <div class="col s2" id="navbar-image">
@@ -78,7 +79,7 @@
                                 <div class="card-image">
                                     <img src="images/amazon.jpg">
                                     <span class="card-title"></span>
-                                    <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                    <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="amazonBtn">
                                         <i class="material-icons">card_membership</i>
                                     </a>
                                 </div>
@@ -93,7 +94,7 @@
                                 <div class="card-image">
                                     <img src="images/gnc.jpg">
                                     <span class="card-title"></span>
-                                    <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                    <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="gncBtn">
                                         <i class="material-icons">card_membership</i>
                                     </a>
                                 </div>
@@ -110,7 +111,7 @@
                                 <div class="card-image">
                                     <img src="images/visa.jpg">
                                     <span class="card-title"></span>
-                                    <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                    <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="visaBtn">
                                         <i class="material-icons">card_membership</i>
                                     </a>
                                 </div>
@@ -125,7 +126,7 @@
                                 <div class="card-image">
                                     <img src="images/cookie.jpg">
                                     <span class="card-title"></span>
-                                    <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                    <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="cookiebtn">
                                         <i class="material-icons">card_membership</i>
                                     </a>
                                 </div>
@@ -142,7 +143,7 @@
                                 <div class="card-image">
                                     <img src="../images/protein1.jpg">
                                     <span class="card-title"></span>
-                                    <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                    <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="proteinBtn">
                                         <i class="material-icons">card_membership</i>
                                     </a>
                                 </div>
@@ -157,7 +158,7 @@
                                 <div class="card-image">
                                     <img src="../images/scheels1.jpg">
                                     <span class="card-title"></span>
-                                    <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                    <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="scheelsBtn">
                                         <i class="material-icons">card_membership</i>
                                     </a>
                                 </div>
@@ -182,7 +183,7 @@
                                         <div class="card-image">
                                             <img src="images/nike.jpeg">
                                             <span class="card-title"></span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="nikeBtn">
                                                 <i class="material-icons">accessibility</i>
                                             </a>
                                         </div>
@@ -197,7 +198,7 @@
                                         <div class="card-image">
                                             <img src="images/adidas.jpg">
                                             <span class="card-title"></span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="adidasBtn">
                                                 <i class="material-icons">accessibility</i>
                                             </a>
                                         </div>
@@ -214,7 +215,7 @@
                                         <div class="card-image">
                                             <img src="images/ogio.jpg">
                                             <span class="card-title"></span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="ogioBtn">
                                                 <i class="material-icons">accessibility</i>
                                             </a>
                                         </div>
@@ -229,7 +230,7 @@
                                         <div class="card-image">
                                             <img src="images/UA1.jpg">
                                             <span class="card-title"></span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="uaBtn">
                                                 <i class="material-icons">accessibility</i>
                                             </a>
                                         </div>
@@ -246,7 +247,7 @@
                                         <div class="card-image">
                                             <img src="../images/lulu.jpg">
                                             <span class="card-title"></span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="luluBtn">
                                                 <i class="material-icons">accessibility</i>
                                             </a>
                                         </div>
@@ -261,7 +262,7 @@
                                         <div class="card-image">
                                             <img src="../images/puma.jpg">
                                             <span class="card-title"></span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="pumaBtn">
                                                 <i class="material-icons">accessibility</i>
                                             </a>
                                         </div>
@@ -286,7 +287,7 @@
                                         <div class="card-image">
                                             <img src="images/jump.jpg">
                                             <span class="card-title"></span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="jumpBtn">
                                                 <i class="material-icons">fitness_center</i>
                                             </a>
                                         </div>
@@ -301,7 +302,7 @@
                                         <div class="card-image">
                                             <img src="images/bands.jpg">
                                             <span class="card-title"></span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="bandBtn">
                                                 <i class="material-icons">fitness_center</i>
                                             </a>
                                         </div>
@@ -318,7 +319,7 @@
                                         <div class="card-image">
                                             <img src="images/dumb.jpg">
                                             <span class="card-title"></span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="dumbBtn">
                                                 <i class="material-icons">fitness_center</i>
                                             </a>
                                         </div>
@@ -333,13 +334,13 @@
                                         <div class="card-image">
                                             <img src="images/kettle.png">
                                             <span class="card-title"></span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="kettleBtn">
                                                 <i class="material-icons">fitness_center</i>
                                             </a>
                                         </div>
                                         <div class="card-content">
                                             <p>KettleBell
-                                                <br> Cost: 75 points</p>
+                                                <br> Cost: 120 points</p>
                                         </div>
                                     </div>
                                 </div>
@@ -350,7 +351,7 @@
                                         <div class="card-image">
                                             <img src="../images/bike.jpg">
                                             <span class="card-title"></span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="bikeBtn">
                                                 <i class="material-icons">fitness_center</i>
                                             </a>
                                         </div>
@@ -365,7 +366,7 @@
                                         <div class="card-image">
                                             <img src="../images/treadmill.jpg">
                                             <span class="card-title"></span>
-                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4">
+                                            <a class="btn-floating halfway-fab waves-effect waves-light  blue accent-4" id="treadmillBtn">
                                                 <i class="material-icons">fitness_center</i>
                                             </a>
                                         </div>
@@ -383,28 +384,208 @@
    
 </body>
 <style>
-    .carousel .carousel-item {
-        width: 100%;
-        ;
-    }
-
-    #product {
-        margin-left: 32%
-    }
+    
 </style>
 
 <script>
-    $("#protein").click(function () {
-            console.log($("#protein"))
-            console.log("hello there")
+ var dumyData = 200
+//  ___________________________________________Gift Cards______________________________________-
+    $("#amazonBtn").click(function () {
+        var amazon = 100;
+        var score = dumyData - amazon;
+            console.log('hi')
+            if(amazon <= dumyData){
+                alert("Your Amazone gift card is on its way, You now have " + score + " points left")
+            }else {
+                alert("Get back to the gym to earn more points!")
+            }
         });
 
+        $("#gncBtn").click(function () {
+        var gnc = 200;
+        var score = dumyData - gnc
+            console.log('hi')
+            if(gnc <= dumyData){
+                alert("Your GNC gift card is on its way, You now have " + score + " points left!")
+            }else {
+                alert("Get back to the gym to earn more points!")
+            }
+        });
 
+        $("#visaBtn").click(function () {
+        var visa = 100;
+        var score = dumyData - visa;
+            console.log('hi')
+            if(visa <= dumyData){
+                alert("Your Visa gift card is on its way, You now have " + score + " points left!")
+            }else {
+                alert("Get back to the gym to earn more points!")
+            }
+        });
 
+        $("#cookiebtn").click(function () {
+        var cookie = 40;
+        var score = dumyData - cookie;
+            console.log('hi')
+            if(cookie <= dumyData){
+                alert("Your Crumbl Cookie gift card is on its way! You know have " + score + " points left" )
+            }else {
+                alert("Get back to the gym to earn more points!")
+            }
+        });
+        $("#proteinBtn").click(function () {
+        var protein = 60;
+        var score = dumyData - protein;
+            console.log('hi')
+            if(protein <= dumyData){
+                alert("Your Protein Foundary Gift Card  is on its way!  You know have " + score + " points left")
+            }else {
+                alert("Get back to the gym!")
+            }
+        });
 
+        $("#scheelsBtn").click(function () {
+        var scheels = 400;
+        var score = scheels - dumyData;
+            console.log('hi')
+            if(scheels <= dumyData){
+                alert("Your Scheels Gift Card is on its way! You know have " + score + " points left")
+            }else {
+                alert("Get back to the gym! You still need " + score + " points!")
+            }
+        });
+        // __________________________________________________APPERAL__________________________________________________
+        $("#nikeBtn").click(function () {
+        var nike = 100;
+        var score = dumyData - nike
+        
+            if(nike <= dumyData){
+                alert("Your Nike socks are on their way! You now have  " + score + " points left")
+            }else {
+                alert("Get back to the gym!")
+            }
+        });
 
+        $("#adidasBtn").click(function () {
+        var adidas = 300;
+        var score = adidas - dumyData;
+            console.log('hi')
+            if(adidas <= dumyData){
+                alert("Your Treadmill is on its way!")
+            }else {
+                alert("Get back to the gym! You still need " + score + " points!")
+            }
+        });
 
+        $("#ogioBtn").click(function () {
+        var ogio = 150;
+        var score = dumyData - ogio
+            console.log('hi')
+            if(ogio <= dumyData){
+                alert("Your Ogio Bag is on its way! You now have  " + score + " points left")
+            }else {
+                alert("Get back to the gym!")
+            }
+        });
 
+        $("#uaBtn").click(function () {
+        var ua = 300;
+        var score = ua - dumyData
+            console.log('hi')
+            if(us <= dumyData){
+                alert("Your Under Jacket is on its way!")
+            }else {
+                alert("Get back to the gym! You still need " + score + " points!")
+            }
+        });
+
+        $("#luluBtn").click(function () {
+        var lulu = 60;
+        var score = dumyData - lulu;
+            console.log('hi')
+            if(lulu <= dumyData){
+                alert("Your LuluLemon hat is on its way! You now have  " + score + " points left")
+            }else {
+                alert("Get back to the gym!")
+            }
+        });
+
+        $("#pumaBtn").click(function () {
+        var puma = 75;
+        var score = dumyData - puma;
+            console.log('hi')
+            if(pume <= dumyData){
+                alert("Your Puma shorts are on their way! You now have  " + score + " points left")
+            }else {
+                alert("Get back to the gym!")
+            }
+        });
+        // ___________________________________________________GYM EQUIPMENT________________________________________________
+        $("#jumpBtn").click(function () {
+        var jump = 100;
+        var score = dumyData - jump;
+            console.log('hi')
+            if(jump <= dumyData){
+                alert("Your Jump Rope is on its way! You now have  " + score + " points left")
+            }else {
+                alert("Get back to the gym!")
+            }
+        });
+
+        $("#bandBtn").click(function () {
+        var band = 200;
+        var score = dumyData - band;
+            console.log('hi')
+            if(band <= dumyData){
+                alert("Your Resistence bands are on their way!You now have  " + score + " points left")
+            }else {
+                alert("Get back to the gym!")
+            }
+        });
+
+        $("#dumbBtn").click(function () {
+        var dumbbell = 100;
+        var score = dumyData - dumbbell;
+            console.log('hi')
+            if(dumbbell <= dumyData){
+                alert("Your Dumbbell is on its way! You now have  " + score + " points left")
+            }else {
+                alert("Get back to the gym!")
+            }
+        });
+
+        $("#kettleBtn").click(function () {
+        var kettle = 120;
+        var score = dumyData - kettle;
+            console.log('hi')
+            if(kettle <= dumyData){
+                alert("Your KettleBell is on its way! You now have  " + score + " points left")
+            }else {
+                alert("Get back to the gym!")
+            }
+        });
+
+        $("#bikeBtn").click(function () {
+        var bike = 2500;
+        var score = bike - dumyData;
+            console.log('hi')
+            if(bike <= dumyData){
+                alert("Your Treadmill is on its way!")
+            }else {
+                alert("Get back to the gym! You still need " + score + " points!")
+            }
+        });
+
+        $("#treadmillBtn").click(function () {
+        var treadmill = 5000;
+        var score = treadmill - dumyData;
+            console.log('hi')
+            if(treadmill <= dumyData){
+                alert("Your Treadmill is on its way!")
+            }else {
+                alert("Get back to the gym! You still need " + score + " points!")
+            }
+        });
 
         $(document).ready(function () {
             $('.sidenav').sidenav();
