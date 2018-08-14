@@ -83,10 +83,9 @@
   <script>
 
 
-
-
     // if they are succesfully signed in this function will run
     function onSignIn(googleUser) {
+
       // Useful data for your client-side scripts:
       var profile = googleUser.getBasicProfile();
       // console.log('giving up ')
@@ -103,6 +102,7 @@
 
       if (googleUser) {
 
+
         $.ajax({
           method: 'get',
           url: '/api/userInfo',
@@ -116,12 +116,14 @@
           }
         }).then(function (response) {
           console.log(response)
-        })
+          window.location = '/home?sid=' + response.sid
+        });
 
       }
 
 
     };
+
 
   </script>
 
