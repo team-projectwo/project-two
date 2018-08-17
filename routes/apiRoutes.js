@@ -6,14 +6,17 @@ var points = 0;
 var signInId;
 
 var mysql = require("mysql");
-
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Royall14",
-  database: "project2",
-  multipleStatements: true
-});
+if (process.env.JAWSDB_URL){
+  con = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  con = mysql.createConnection({
+    host: "blonze2d5mrbmcgf.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    user: "l4v0gf6772i7lvcm",
+    password: "jqnpdcy0u7ui3ps1",
+    database: "dblmz7lghplfbwj4",
+    multipleStatements: true
+  });
+}
 
 module.exports = function (app) {
   // Get all examples
